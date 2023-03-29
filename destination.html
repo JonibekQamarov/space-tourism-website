@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="destination-body">
+    <!-- HEADER -->
+    <header class="site-header">
+      <!-- LOGO -->
+      <div class="logo fade">
+        <a class="logo__link" href="/">
+          <img
+            class="logo__img"
+            src="images/logo.svg"
+            alt="Space Tourism website logo"
+            width="48"
+            height="48"
+          />
+        </a>
+      </div>
+      <!-- /LOGO -->
+
+      <!-- SITENAV -->
+      <nav class="sitenav">
+        <!-- NAV TOGGLER -->
+        <button class="fade sitenav-toggler" data-nav-toggler>
+          <span class="sitenav-toggler__line"></span>
+          <span class="sitenav-toggler__line"></span>
+          <span class="sitenav-toggler__line"></span>
+        </button>
+        <!-- /NAV TOGGLER -->
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link fade" href="/">00 HOME</a>
+          </li>
+          <li class="sitenav__item">
+            <a
+              class="sitenav__link fade sitenav__link--active"
+              href="destination.html"
+              >01 DESTINATION</a
+            >
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link fade" href="crew.html">02 CREW</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link fade" href="technology.html"
+              >03 TECHNOLOGY</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- /SITENAV -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <!-- INFO DESTINATION -->
+      <section class="info-destination">
+        <div class="container slide-up">
+          <h2 class="destination__title">
+            <span class="destination__title-inner">01</span> Pick your
+            destination
+          </h2>
+        </div>
+        <div class="container slide-up">
+          <div class="info-destination__inner">
+            <img
+              class="info-destination__img"
+              src="images/moon.png"
+              alt="Moon"
+              width="445"
+              height="445"
+              srcset="images/moon.png 1x, images/moon@2x.png 2x"
+              data-dest-img
+            />
+            <div class="info-destination__content">
+              <ul class="info-destination__list">
+                <li
+                  class="info-destination__item info-destination__item--active"
+                  value="MOON"
+                  data-dest-item
+                >
+                  MOON
+                </li>
+                <li class="info-destination__item" value="MARS" data-dest-item>
+                  MARS
+                </li>
+                <li
+                  class="info-destination__item"
+                  value="EUROPA"
+                  data-dest-item
+                >
+                  EUROPA
+                </li>
+                <li class="info-destination__item" value="TITAN" data-dest-item>
+                  TITAN
+                </li>
+              </ul>
+              <h3 class="info-destination__heading" data-dest-heading>MOON</h3>
+              <p class="info-destination__desc" data-dest-desc>
+                See our planet as you’ve never seen it before. A perfect
+                relaxing trip away to help regain perspective and come back
+                refreshed. While you’re there, take in some history by visiting
+                the Luna 2 and Apollo 11 landing sites.
+              </p>
+              <div
+                class="info-destinatin__travel-distance travel-distance-destination"
+              >
+                <div class="travel-distance-destination__inner">
+                  <p class="travel-distance-destination__title">
+                    AVG. DISTANCE
+                  </p>
+                  <p
+                    class="travel-distance-destination__subtitle"
+                    data-dest-distance
+                  >
+                    384,400 km
+                  </p>
+                </div>
+                <div class="travel-distance-destination__inner">
+                  <p class="travel-distance-destination__title">
+                    Est. travel time
+                  </p>
+                  <p
+                    class="travel-distance-destination__subtitle"
+                    data-dest-time
+                  >
+                    3 days
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- INFO DESTINATION -->
+    </main>
+    <!-- /MAIN -->
+
+    <!-- VISUAL HIDDENS -->
+    <img
+      class="visually-hidden"
+      alt=""
+      aria-hidden="true"
+      data-destination-img
+    />
+    <img
+      class="visually-hidden"
+      alt=""
+      aria-hidden="true"
+      data-destination-img
+    />
+    <img
+      class="visually-hidden"
+      alt=""
+      aria-hidden="true"
+      data-destination-img
+    />
+    <img
+      class="visually-hidden"
+      alt=""
+      aria-hidden="true"
+      data-destination-img
+    />
+    <!-- /VISUAL HIDDENS -->
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@import "./mixins";
+@import "./variables";
+@import "./fonts";
+@import "./common";
+@import "./container";
+@import "./animations";
+
+// INDEX
+@import "pages/index";
+@import "pages/destination";
+@import "pages/crew";
+@import "pages/technology";
+
+// BLOCKS
+@import "./blocks/header";
+@import "./blocks/intro";
+@import "./blocks/info-destination";
+@import "./blocks/crew-info";
+@import "./blocks/launch-technology";
+@import "./blocks/footer";

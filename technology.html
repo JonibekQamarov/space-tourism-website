@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="technology-body">
+    <!-- HEADER -->
+    <header class="site-header">
+      <!-- LOGO -->
+      <div class="logo fade">
+        <a class="logo__link" href="/">
+          <img
+            class="logo__img"
+            src="images/logo.svg"
+            alt="Space Tourism website logo"
+            width="48"
+            height="48"
+          />
+        </a>
+      </div>
+      <!-- /LOGO -->
+
+      <!-- SITENAV -->
+      <nav class="sitenav">
+        <!-- NAV TOGGLER -->
+        <button class="fade sitenav-toggler" data-nav-toggler>
+          <span class="sitenav-toggler__line"></span>
+          <span class="sitenav-toggler__line"></span>
+          <span class="sitenav-toggler__line"></span>
+        </button>
+        <!-- /NAV TOGGLER -->
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link fade" href="/">00 HOME</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link fade" href="destination.html"
+              >01 DESTINATION</a
+            >
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link fade" href="crew.html">02 CREW</a>
+          </li>
+          <li class="sitenav__item">
+            <a
+              class="sitenav__link fade sitenav__link--active"
+              href="technology.html"
+              >03 TECHNOLOGY</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- /SITENAV -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <!-- LAUNCH TECHNOLOGY -->
+      <section class="launch-technology slide-up">
+        <h2 class="launch-technology__title">
+          <span class="launch-technology__title-inner">03</span> SPACE LAUNCH
+          101
+        </h2>
+        <div class="launch-technology__inner">
+          <div class="launch-technology__left">
+            <ul class="launch-technology__list navlist-technology">
+              <li
+                class="navlist-technology__item navlist-technology__item--active"
+                data-technology-list-item="Launch vehicle"
+              >
+                1
+              </li>
+              <li
+                class="navlist-technology__item"
+                data-technology-list-item="Spaceport"
+              >
+                2
+              </li>
+              <li
+                class="navlist-technology__item"
+                data-technology-list-item="Space capsule"
+              >
+                3
+              </li>
+            </ul>
+            <div class="launch-technology__content">
+              <p class="launch-technology__subtitle">THE TERMINOLOGY…</p>
+              <h2 class="launch-technology__heading" data-technology-heading>
+                LAUNCH VEHICLE
+              </h2>
+              <p class="launch-technology__desc" data-technology-desc>
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                used to carry a payload from Earth's surface to space, usually
+                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                powerful in operation. Standing 150 metres tall, it's quite an
+                awe-inspiring sight on the launch pad!
+              </p>
+            </div>
+          </div>
+          <img
+            class="launch-technology__img"
+            src="images/launch-vehicle-portrait.jpg"
+            alt="Launch vehicle"
+            width="515"
+            height="527"
+            srcset="
+              images/launch-vehicle-portrait.jpg    1x,
+              images/launch-vehicle-portrait@2x.png 2x
+            "
+            data-launch-img="Launch vehicle"
+          />
+        </div>
+      </section>
+      <!-- /LAUNCH TECHNOLOGY -->
+    </main>
+    <!-- /MAIN -->
+
+            <!-- VISUAL HIDDENS -->
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-img>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-img>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-img>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-img>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-land>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-land>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-land>
+            <img class="visually-hidden" alt="" aria-hidden="true" data-tech-hidden-land>
+            <!-- /VISUAL HIDDENS -->
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/technology.js"></script>
+  </body>
+</html>

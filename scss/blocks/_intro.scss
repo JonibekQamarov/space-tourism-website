@@ -1,0 +1,104 @@
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 210px;
+  transition: align-items 0.5s ease, padding-top 0.5s ease;
+
+  @media only screen and (max-width: $tablet-l) {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 120px;
+    padding-top: 170px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding-top: 80px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding-top: 28px;
+  }
+
+  *:focus {
+    outline-offset: 0;
+  }
+}
+
+.intro__content {
+  max-width: 450px;
+}
+
+.intro__title {
+  @include for-text(h2);
+  margin-bottom: 24px;
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 16px;
+  }
+}
+
+.intro__heading {
+  @include for-text(h3, 150px);
+  margin-bottom: 24px;
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 16px;
+  }
+}
+
+.intro__description {
+  @include for-text(p);
+}
+
+.intro__circle-btn {
+  border: none;
+  cursor: pointer;
+  --text-color: #000;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  transition: outline 0.5s ease;
+  outline: 0px solid rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    outline: 88px solid rgba(255, 255, 255, 0.1);
+
+    @media only screen and (max-width: $tablet) {
+      outline-width: 66px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      outline-width: 44px;
+    }
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    width: 242px;
+    height: 242px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+  }
+}

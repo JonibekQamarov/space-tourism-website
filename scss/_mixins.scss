@@ -1,0 +1,97 @@
+// for text
+@mixin for-text($text-type, $size: 100px) {
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.1;
+  transition: font-size 0.5s ease;
+
+  @if $text-type == h2 {
+    font-size: 28px;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 16px;
+    }
+  } @else if $text-type == h3 {
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    font-size: $size;
+    @media only screen and (max-width: $mobile) {
+      @if $size > 100px {
+        $size: 80px;
+      } @else if $size <= 100px {
+        $size: 56px;
+      }
+
+      font-size: $size;
+    }
+  } @else if $text-type == h4 {
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+  } @else if $text-type == p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--lighten);
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 16px;
+    }
+  } @else if $text-type == span {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    color: var(--lighten);
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+}
+
+// for crew
+@mixin text-format($text) {
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.2;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  transition: font-size 0.5s ease;
+
+  @if $text == big {
+    font-size: 56px;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 48px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 40px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 24px;
+    }
+  } @else if $text == small {
+    font-size: 32px;
+    opacity: 0.5;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 24px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+}

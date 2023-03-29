@@ -1,0 +1,237 @@
+/* CUSTOM PROPS */
+:root {
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #0c0e1a;
+  --text-color: #fff;
+  --lighten: #d0d6f9;
+  --border-color: #383b4b;
+}
+
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px dashed var(--text-color);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: "Barlow Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  transition: font-size 0.5s ease;
+
+  @media only screen and (min-width: $desktop) {
+    overflow: hidden;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 14px;
+  }
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  @media only screen and (min-width: $tablet) {
+    width: 12px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  @media only screen and (min-width: $tablet) {
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px grey;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  @media only screen and (min-width: $tablet) {
+    background: rgb(110, 110, 110);
+    border-radius: 10px;
+
+    &:hover {
+      background: rgb(110, 110, 110);
+    }
+  }
+}
+
+/* VISUALLY HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40px);
+  padding: 38px 255px 38px 143px;
+
+  @media only screen and (max-width: $desktop) {
+    padding: 38px 200px 38px 120px;
+    gap: 42px;
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    padding: 38px 100px 38px 80px;
+    gap: 37px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 38px 48px;
+    gap: 37px;
+  }
+
+  @media only screen and (max-width: 620px) {
+    padding: 38px 40px;
+    gap: 25px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    padding: 35% 0 0 32px;
+    align-items: flex-start;
+    right: -100%;
+    transition: right 0.5s ease;
+    gap: 0;
+  }
+}
+
+.sitenav__item {
+  @media only screen and (max-width: $mobile) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.sitenav__link {
+  color: var(--text-color);
+  letter-spacing: 2.7px;
+  letter-spacing: 2.3px;
+  position: relative;
+
+  &-inner {
+    font-weight: 700;
+    margin-right: 2px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    bottom: -41px;
+    transition: opacity 0.5s ease;
+
+    @media only screen and (max-width: $tablet) {
+      bottom: -40px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      height: 100%;
+      width: 3px;
+      top: 0;
+      left: auto;
+      bottom: auto;
+      right: 0;
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &--active {
+    &:hover::after {
+      opacity: 0.5;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      opacity: 1;
+      bottom: -41px;
+      transition: opacity 0.5s ease;
+
+      @media only screen and (max-width: $tablet) {
+        bottom: -40px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        height: 100%;
+        width: 3px;
+        top: 0;
+        left: auto;
+        bottom: auto;
+        right: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 6px 0;
+    display: block;
+    min-width: 100%;
+  }
+}

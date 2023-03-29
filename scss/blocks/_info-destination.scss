@@ -1,0 +1,221 @@
+.info-destination {
+  padding: 36px 0 50px;
+  transition: padding 0.5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    padding: 28px 40px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 20px 0 30px;
+  }
+}
+
+.destination__title {
+  @include for-text(h2);
+  margin-bottom: 95px;
+  transition: margin-bottom 0.5s ease;
+
+  @media only screen and (max-width: $tablet-l) {
+    margin-bottom: 80px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+}
+
+.destination__title-inner {
+  opacity: 0.25;
+  font-weight: 700;
+}
+
+.info-destination__inner {
+  padding-left: 64px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  transition: padding-left 0.5s ease;
+
+  @media only screen and (max-width: $desktop) {
+    padding-left: 54px;
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+    padding-left: 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    gap: 40px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    gap: 26px;
+  }
+}
+
+.info-destination__img {
+  max-width: 445px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: max-width 0.5s ease, transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 370px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    max-width: 300px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    max-width: 200px;
+  }
+}
+
+.info-destination__content {
+  max-width: 445px;
+
+  @media only screen and (max-width: $tablet-l) {
+    max-width: none;
+  }
+}
+
+.info-destination__list {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  letter-spacing: 2.7px;
+  padding: 12px 0;
+  margin-bottom: 37px;
+
+  @media only screen and (max-width: $tablet-l) {
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
+}
+
+.info-destination__item {
+  cursor: pointer;
+  color: var(--lighten);
+  position: relative;
+  user-select: none;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &--active {
+    color: var(--text-color);
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.info-destination__heading {
+  @include for-text(h3, 100px);
+  margin-bottom: 23px;
+}
+
+.info-destination__desc {
+  @include for-text(p);
+  margin-bottom: 54px;
+  min-height: 130px;
+
+  @media only screen and (max-width: $tablet-l) {
+    min-height: auto;
+    margin-bottom: 80px;
+  }
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 55px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 50px;
+  }
+}
+
+.info-destinatin__travel-distance {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  transition: gap 0.5s ease;
+
+  @media only screen and (max-width: $tablet-l) {
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.travel-distance-destination {
+  border-top: 1px solid #383b4b;
+  padding-top: 28px;
+}
+
+.travel-distance-destination__title {
+  @include for-text(span);
+  margin-bottom: 12px;
+}
+
+.travel-distance-destination__subtitle {
+  @include for-text(h4);
+}
